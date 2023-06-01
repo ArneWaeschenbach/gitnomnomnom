@@ -1,11 +1,24 @@
-export const checkbox = (name) => {
+import React, { useState } from 'react';
 
-}
-return (
-<div>
-    <li> {name} <input type="checkbox" /></li>
-</div>
+const Checkbox = ({ name, onChange }) => {
+  const [checked, setChecked] = useState(false);
+  const [type, setType] = useState('');
 
-)
+  const handleChange = () => {
+    const newChecked = !checked;
+    setChecked(newChecked);
+    setType(newChecked ? name : '');
+    onChange(type);
+  };
 
-export default checkbox
+  return (
+    <div>
+      <li>
+        {name}{' '}
+        <input type="checkbox" checked={checked} onChange={handleChange} />
+      </li>
+    </div>
+  );
+};
+
+export default Checkbox;

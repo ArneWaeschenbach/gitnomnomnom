@@ -9,3 +9,16 @@ export const setRestaurantLocation = (newLat, newLng) => {
 export const getRestaurantLocation = () => {
   return { lat, lng };
 };
+
+let Type =""
+export const setType = (newType) => {
+Type = newType
+
+console.log(Type);
+return  Type
+}
+
+
+export const getType = () => {
+   return  Type
+}

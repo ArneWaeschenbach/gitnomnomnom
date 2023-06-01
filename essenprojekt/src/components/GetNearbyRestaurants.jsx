@@ -1,7 +1,13 @@
-const getNearbyRestaurants = (latitude, longitude, radius) => {
+
+import { getType } from "./RestaurantLocation";
+
+const getNearbyRestaurants = (latitude, longitude, radius,type) => {
+  // type=getType 
+  type=getType()
+  // console.log(type);
     return new Promise((resolve, reject) => {
-        const url = `https://corsproxy.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=restaurant&key=AIzaSyBxDaNQIDd6epZFcX7rE46-a4btMaqUU5M`;
-      
+        const url = `https://corsproxy.io/?https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=restaurant&keyword=${encodeURIComponent(type)}&key=AIzaSyBxDaNQIDd6epZFcX7rE46-a4btMaqUU5M`;
+        
         fetch(url)
         .then(response => response.json())
         .then(data => {
