@@ -9,8 +9,10 @@ const MapContainer = (props) => {
     
   };
   const { lat, lng } = getRestaurantLocation();
+  
   const [markerPosition] = useState({
     lat ,lng 
+    
   });
 
   return (

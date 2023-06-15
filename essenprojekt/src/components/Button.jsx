@@ -33,22 +33,52 @@ export const Button = () => {
   const [checkboxName, setCheckboxName] = useState('');
   
   
-
-  const handleClick = async () => {
+  const handleClickMultipleTimes = async () => {
     try {
       const position = await getPositon();
-      const restaurant = await getNearbyRestaurants(position.latPositon, position.lngPositon, radius, checkboxName);
-      const info = `Name: ${restaurant.name} | Address: ${restaurant.address}`;
-      setRestaurantInfo(info);
-
-      setRestaurantLocation(restaurant.longitude, restaurant.latitude);
-      setType(checkboxName)
-    
+      const restaurantInfoArray = [];
+      let loopCount = 0;
+  
+      while (restaurantInfoArray.length < 5 && loopCount < 10) {
+        const restaurant = await getNearbyRestaurants(position.latPositon, position.lngPositon, radius, );
+        
+        loopCount++;
+        
+        const isDuplicate = restaurantInfoArray.some((item) => 
+          item.info === `Name: ${restaurant.name} | Address: ${restaurant.address}`
+        );
+  
+        if (!isDuplicate) {
+          const info = `Name: ${restaurant.name} | Address: ${restaurant.address}`;
+          restaurantInfoArray.push({ info, longitude: restaurant.longitude, latitude: restaurant.latitude });
+        }
+  
+      }
+      if (restaurantInfoArray.length < 5) {
+        restaurantInfoArray.push({ info: 'Keine weiteren Restaurants gefunden' });
+      }
+  
+      if (restaurantInfoArray.length === 0) {
+        setRestaurantInfo('Keine Restaurants in der Nähe gefunden.');
+      } else {
+        setRestaurantInfo(restaurantInfoArray.map(restaurant => restaurant.info).join('<br><br>'));
+  
+        const firstRestaurant = restaurantInfoArray[0];
+        setRestaurantLocation(firstRestaurant.longitude, firstRestaurant.latitude);
+      }
+  
+      setType(checkboxName);
     } catch (error) {
       console.error(error);
-      setRestaurantInfo('Error: No nearby restaurants found');
+      setRestaurantInfo('Fehler: Keine Restaurants in der Nähe gefunden.');
     }
   };
+  
+  
+
+  
+
+  
   
   return (
     <div>
@@ -61,8 +91,8 @@ export const Button = () => {
 <Checkbox name="Chinesisch" onChange={() => handleCheckboxChange("Chinesisch")} />
 <Checkbox name="griechisch" onChange={() => handleCheckboxChange("griechisch")} />
 
-      <button onClick={handleClick} >Get nearby restaurant</button>
-      <p>{restaurantInfo}</p>
+<button onClick={handleClickMultipleTimes}>Get nearby restaurants </button>
+<p dangerouslySetInnerHTML={{ __html: restaurantInfo }}></p>
       {restaurantInfo && <MapContainer key={restaurantInfo} />}
     </div>
   );

@@ -4,17 +4,21 @@ let lng = 0;
 export const setRestaurantLocation = (newLat, newLng) => {
   lat = newLng;
   lng = newLat;
+  
 };
 // export der daten nach Map
 export const getRestaurantLocation = () => {
   return { lat, lng };
 };
 
+
+
+
 let Type =""
 export const setType = (newType) => {
 Type = newType
 
-console.log(Type);
+
 return  Type
 }
 
