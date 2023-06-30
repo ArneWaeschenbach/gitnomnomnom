@@ -8,3 +8,8 @@ Weitere geplante Funksonen :
    - Eingabe von Adressen/Standortkorrekturen
    - Anzeige der ersten 5 Ergebnisse mit Preisinformationen  [x]
 
+
+
+##How to run The NomNomNom app 
+
+At First you have to move to the App `app` file, To sart the app you have to type ```bash Npm Run Dev``` at the terminal.
