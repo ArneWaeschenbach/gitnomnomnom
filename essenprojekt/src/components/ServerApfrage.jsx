@@ -4,12 +4,14 @@ const ServerStatus = () => {
   const [serverStatus, setServerStatus] = useState('');
 
   useEffect(() => {
-    fetch('https://corsproxy.io/?http://localhost:3001/check-connection')
+    fetch('http://localhost:3001/check-connection') // Verwende die direkte URL, ohne den CORS-Proxy
       .then(response => response.json())
-      .then(data => setServerStatus(data.message))
+      .then(data => {
+        console.log('Response data:', data);
+        setServerStatus(data.message);
+      })
       .catch(error => console.error('Server connection error:', error));
-      
-  }, );
+  }, []);
 
   return (
     <div>
