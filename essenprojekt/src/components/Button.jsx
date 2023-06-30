@@ -6,6 +6,8 @@ import { setRestaurantLocation } from './RestaurantLocation';
 import MapContainer from "./Map";
 import Checkbox from './Checkbox';
 import { setType } from './RestaurantLocation';
+import SaveButton from './SaveButton';
+
 export const Button = () => {
   const [restaurantInfo, setRestaurantInfo] = useState('');
   const [radius, setRadius] = useState('');

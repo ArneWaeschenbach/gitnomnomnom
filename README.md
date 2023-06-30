@@ -4,7 +4,7 @@ Weitere geplante Funksonen :
 
    - Anzeige der Laufwege zu den Restaurants
    - Priorisierungssystem/Bewertungen
-   - Einbindung von Schlagwörtern wie "italienisch", "chinesisch" usw.
+   - Einbindung von Schlagwörtern wie "italienisch", "chinesisch" usw. [x]
    - Eingabe von Adressen/Standortkorrekturen
-   - Anzeige der ersten 5 Ergebnisse mit Preisinformationen
+   - Anzeige der ersten 5 Ergebnisse mit Preisinformationen  [x]
 

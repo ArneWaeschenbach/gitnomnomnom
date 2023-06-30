@@ -13,16 +13,31 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-
-
 app.use(cors());
 app.use((req, res, next) => {
   res.setHeader('Content-Security-Policy', "default-src 'self' http://localhost:3001");
   next();
 });
-
-// Hinzugefügte Route für das Favicon
 app.get('/favicon.ico', (req, res) => res.status(204));
+
+
+app.post('/save-data', (req, res) => {
+  const { dataToSave } = req.body;
+  res.json({ message: 'Restaurantinformationen erfolgreich gespeichert' });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('/check-connection', (req, res) => {
   pool.getConnection((err, connection) => {
