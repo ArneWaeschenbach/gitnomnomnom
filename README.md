@@ -10,9 +10,9 @@ Weitere geplante Funksonen :
 
 
 
-##How to run The NomNomNom app
+##How to run The NomNomNom app##
 
 At First you have to move to the App 'app' file, To start the app you have to type 'Npm Run Dev' at the terminal.
 Now you can click on the link that came up at the terminal, when you enter the site you have to enter a radius and press the button and now the APP give you a list of restaurants
 
-AT WORK !!!!!
+work in progress!!!!!
