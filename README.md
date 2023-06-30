@@ -12,4 +12,6 @@ Weitere geplante Funksonen :
 
 ##How to run The NomNomNom app 
 
-At First you have to move to the App `app` file, To sart the app you have to type ```bash Npm Run Dev``` at the terminal.
+At First you have to move to the App `app` file, To sart the app you have to type 
+```bash Npm Run Dev``` 
+at the terminal.
