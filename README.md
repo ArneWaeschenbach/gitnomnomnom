@@ -1,31 +1,31 @@
 To run the NomNomNom app, please follow these steps:
 
-    Open your terminal and navigate to the "app" directory of the project.
+1:
+Open your terminal and navigate to the "app" directory of the project.
+   
+      cd app
 
-    bash
-
-cd app
-
+2:
 Install the necessary dependencies by running the following command:
 
-npm install
+      npm install
 
 Note: If you encounter any issues related to Google Maps data blocking the installation, you can try using the --force flag to force the installation. Run the following command instead:
 
-css
+      npm install --force
 
-npm install --force
-
+3:
 Once the installation is complete, start the app by running the following command:
-
-arduino
 
     npm run dev
 
-    A link will be displayed in the terminal. Click on the provided link to access the app in your web browser.
+4:
+A link will be displayed in the terminal. Click on the provided link to access the app in your web browser.
+On the website.
 
-    On the website, you will see an input field where you can enter a radius in meters. Enter the desired radius and press the button.
+5:
+On the website, you will see an input field where you can enter a radius in meters. Enter the desired radius and press the button.
 
-    The app will then provide you with a list of restaurants within the chosen radius.
+6:
+The app will then provide you with a list of restaurants within the chosen radius. Additionally, you can customize the restaurant list by selecting specific checkboxes at the top, which will add corresponding specifications to your search.
 
-Please ensure that you follow these instructions accurately for the successful execution of the app. If you encounter any further issues or have any questions, feel free to ask.
