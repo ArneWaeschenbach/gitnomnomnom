@@ -1,18 +1,31 @@
-Dies ist ein Programm, mit dem man sich Restaurants in seiner Nähe anzeigen lassen kann.
+To run the NomNomNom app, please follow these steps:
 
-Weitere geplante Funksonen :
+    Open your terminal and navigate to the "app" directory of the project.
 
-   - Anzeige der Laufwege zu den Restaurants
-   - Priorisierungssystem/Bewertungen
-   - Einbindung von Schlagwörtern wie "italienisch", "chinesisch" usw. [x]
-   - Eingabe von Adressen/Standortkorrekturen
-   - Anzeige der ersten 5 Ergebnisse mit Preisinformationen  [x]
+    bash
 
+cd app
 
+Install the necessary dependencies by running the following command:
 
-##How to run The NomNomNom app##
+npm install
 
-At First you have to move to the App 'app' file, To start the app you have to type 'Npm Run Dev' at the terminal.
-Now you can click on the link that came up at the terminal, when you enter the site you have to enter a radius and press the button and now the APP give you a list of restaurants
+Note: If you encounter any issues related to Google Maps data blocking the installation, you can try using the --force flag to force the installation. Run the following command instead:
 
-work in progress!!!!!
+css
+
+npm install --force
+
+Once the installation is complete, start the app by running the following command:
+
+arduino
+
+    npm run dev
+
+    A link will be displayed in the terminal. Click on the provided link to access the app in your web browser.
+
+    On the website, you will see an input field where you can enter a radius in meters. Enter the desired radius and press the button.
+
+    The app will then provide you with a list of restaurants within the chosen radius.
+
+Please ensure that you follow these instructions accurately for the successful execution of the app. If you encounter any further issues or have any questions, feel free to ask.
