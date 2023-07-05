@@ -8,9 +8,7 @@ const pool = mysql.createPool({
   user: 'root',
   database: 'node_complete',
   password: 'Dci1234!',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
+  
 });
 
 app.use(cors());
