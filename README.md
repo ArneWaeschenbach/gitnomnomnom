@@ -12,7 +12,10 @@ Install the necessary dependencies by running the following command:
 
 Note: If you encounter any issues related to Google Maps data blocking the installation, you can try using the --force flag to force the installation. Run the following command instead:
 
-      npm install --force
+      npm install --force  
+or
+
+      npm install --legacy-peer-deps
 
 3:
 Once the installation is complete, start the app by running the following command:
