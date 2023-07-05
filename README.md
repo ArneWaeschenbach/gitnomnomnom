@@ -1,7 +1,7 @@
 To run the NomNomNom app, please follow these steps:
 
 1:
-Open your terminal and navigate to the "app" directory of the project.
+After cloning the project data and opening it in Visual Studio Code, open your terminal and navigate to the "app" directory of the project.
    
       cd app
 
@@ -27,5 +27,6 @@ On the website.
 On the website, you will see an input field where you can enter a radius in meters. Enter the desired radius and press the button.
 
 6:
-The app will then provide you with a list of restaurants within the chosen radius. Additionally, you can customize the restaurant list by selecting specific checkboxes at the top, which will add corresponding specifications to your search.
+The app will then provide you with a list of restaurants within the chosen radius. Additionally, you can customize the restaurant list by selecting specific checkboxes at the top, which will add corresponding specifications to your search. 
+Please note that there might be a bug where you need to click the button twice for the selection to work correctly. This issue will be fixed soon. 
 
