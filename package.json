@@ -4,8 +4,7 @@
   "description": "Beschreibung deiner Anwendung",
   "scripts": {
     "start": "node server.cjs",
-    "build": "react-scripts dist",
-    "heroku-postbuild": "npm run dist"
+    "build": "vite build"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,4 +16,3 @@
     "node": "14.x"
   }
 }
-
