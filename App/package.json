@@ -1,22 +1,19 @@
 {
   "name": "essenprojekt",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node App/server.cjs",
-    "build": "node_modules/.bin/vite build",
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
     "google-maps-react": "^2.0.6",
-    "mysql2": "^3.4.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^16.0.0",
-    "vue": "^3.3.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -27,9 +24,4 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.9"
-  },
-  "engines": {
-    "node": "14.x",
-    "npm": "7.x"
   }
-}
