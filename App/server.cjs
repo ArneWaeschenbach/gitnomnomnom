@@ -43,8 +43,7 @@ const path = require('path');
 
 const app = express();
 
-// Statische Dateien aus dem Build-Verzeichnis servieren
-app.use(express.static(path.join(__dirname, 'dist')));
+
 
 // Alle Anfragen an deine React-App weiterleiten
 app.get('*', (req, res) => {
