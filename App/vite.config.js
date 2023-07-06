@@ -1,25 +1,22 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import path from 'path'
 
-const path = require('path')
-const { defineConfig } = require('vite')
-
-module.exports = defineConfig({
+export default defineConfig({
   build: {
-    outDir: path.resolve(__dirname, 'dist'), // Ausgabeverzeichnis für den Build
+    outDir: path.resolve(__dirname, 'dist'),
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'server.js') // Einstiegsdatei für den Build
+        main: path.resolve(__dirname, 'src/main.jsx')
       },
       output: {
-        entryFileNames: 'my-lib.js', // Name der generierten Datei
-        format: 'umd', // Format der generierten Datei
-        name: 'MyLib', // Name der exportierten Bibliothek
+        entryFileNames: 'my-lib.js',
+        format: 'umd',
+        name: 'MyLib',
         globals: {
-          react: 'React' // Globale Variable für React-Abhängigkeit
+          react: 'React'
         }
       }
     }
   },
-  plugins: [react()] // React-Plugin hinzufügen
+  plugins: [react()]
 })
