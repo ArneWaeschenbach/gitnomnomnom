@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Beschreibung deiner Anwendung",
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
+    "start": "node server.cjs",
+    "build": "react-scripts dist",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {

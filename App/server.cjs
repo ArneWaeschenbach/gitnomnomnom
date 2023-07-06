@@ -44,11 +44,11 @@ const path = require('path');
 const app = express();
 
 // Statische Dateien aus dem Build-Verzeichnis servieren
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Alle Anfragen an deine React-App weiterleiten
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 // Den Server auf einem bestimmten Port starten
