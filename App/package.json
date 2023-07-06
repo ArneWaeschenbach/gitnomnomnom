@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.cjs",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "heroku-postbuild": "npm install --only=dev && npm run build"
+    "preview": "vite preview"
   },
+  
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
