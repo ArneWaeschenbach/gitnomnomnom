@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "scripts": {
+    "start": "node ./App/server.cjs"
   }
 }
-
