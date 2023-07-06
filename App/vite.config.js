@@ -1,12 +1,12 @@
-import react from '@vitejs/plugin-react-swc'
-import path from 'path'
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: resolve(__dirname, 'dist'),
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/main.jsx')
+        main: resolve(__dirname, 'src/main.jsx')
       },
       output: {
         entryFileNames: 'my-lib.js',
@@ -17,6 +17,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  plugins: [react()]
+  }
 })
