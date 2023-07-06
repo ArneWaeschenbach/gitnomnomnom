@@ -9,7 +9,7 @@ module.exports = defineConfig({
     outDir: path.resolve(__dirname, 'dist'), // Ausgabeverzeichnis für den Build
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/main.jsx') // Einstiegsdatei für den Build
+        main: path.resolve(__dirname, 'server.js') // Einstiegsdatei für den Build
       },
       output: {
         entryFileNames: 'my-lib.js', // Name der generierten Datei
