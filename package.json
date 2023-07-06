@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.cjs",
     "build": "react-scripts dist",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run dist"
   },
   "dependencies": {
     "cors": "^2.8.5",
