@@ -43,11 +43,12 @@ const path = require('path');
 
 const app = express();
 
-
+// Statische Dateien aus dem Build-Verzeichnis servieren
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Alle Anfragen an deine React-App weiterleiten
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Den Server auf einem bestimmten Port starten
@@ -55,4 +56,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server läuft auf Port ${port}`);
 });
-
